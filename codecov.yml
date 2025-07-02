@@ -1,0 +1,39 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 50%
+        threshold: 3.5%
+        informational: false
+    patch:
+      default:
+        informational: true
+    changes: false
+component_management:
+  individual_components:
+    - component_id: cmd
+      name: cmd
+      paths:
+        - cmd/
+    - component_id: pkg
+      name: pkg
+      paths:
+        - pkg/
+flag_management:
+  individual_flags:
+    - name: cmd
+      paths:
+        - cmd/
+      statuses:
+        - type: project
+          target: 50%
+          threshold: 5%
+    - name: pkg
+      paths:
+        - pkg/
+      statuses:
+        - type: project
+          target: 50%
+          threshold: 3.5%
+ignore:
+  - "pkg/cloud/model/*"

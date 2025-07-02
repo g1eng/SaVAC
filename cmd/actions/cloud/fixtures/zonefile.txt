@@ -1,0 +1,40 @@
+; Zone: ns-testing.s0csec1.org
+$ORIGIN ns-testing.s0csec1.org.
+$TTL 3600
+
+; NS Records
+
+; MX Records
+@   10  IN  MX  10 xn--p8ja0gy19z.ns-testing.s0csec1.org.
+
+; A Records
+xn--p8ja0gy19z  10  IN  A   127.0.0.1
+xn--p8ja0gy19z  10  IN  A   172.17.0.1
+test-server.savac 10 IN A 160.16.87.33
+
+; AAAA Records
+xn--p8ja0gy19z  10  IN  AAAA    ::1
+test-server.savac 10 IN AAAA 2001:e42:102:1519:160:16:87:33
+
+; CNAME Records
+panclo      	10	IN	CNAME xn--p8ja0gy19z.ns-testing.s0csec1.org.
+tsu-ten-kaku-ya	10	IN	CNAME tsushima.tamo.s0csec1.org.
+nekowaf      	10	IN	CNAME kuhqdsx7.user.webaccel.jp.
+
+; PTR Records
+
+; TXT Records
+xn--p8ja0gy19z	10	IN	TXT	v=spf1 -all
+
+; SRV Records
+
+; CAA Records
+
+; HTTPS Records
+
+; SVCB Records
+
+; ALIAS Records
+
+
+

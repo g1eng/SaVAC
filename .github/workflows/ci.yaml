@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - release
+      - dev
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+      - name: Build
+        run: make
+  lint-go:
+    name: lint-go
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+      - name: Setup tools
+        run: |
+          make tools
+      - name: make lint-go
+        run:  |
+          GOROOT=$(go env GOROOT)
+          export GOROOT
+          make lint
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+      - name: start minio
+        run: |
+          make prepare_minio
+      - name: Make coverage file
+        run: |
+          export SAKURA_VPS_API_SECRET="dummy"
+          export SAKURACLOUD_ACCESS_TOKEN="dummy"
+          export SAKURACLOUD_ACCESS_TOKEN_SECRET="dummy"
+          export SAKURASTORAGE_ACCESS_KEY="dummy"
+          export SAKURASTORAGE_ACCESS_SECRET="dummy"
+          export SAVAC_TEST_BUCKET_NAME="sample-bucket-5"
+          export SAVAC_TEST_PERM_NAME="test-perm-name"
+          make coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage.txt
+          fail_ci_if_error: true

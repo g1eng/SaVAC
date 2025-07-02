@@ -1,0 +1,52 @@
+version: "2"
+linters:
+  default: none
+  enable:
+    - errcheck
+#    - gosec
+    - govet
+    - ineffassign
+    - misspell
+    - nakedret
+    - staticcheck
+    - unconvert
+    - whitespace
+  settings:
+    errcheck:
+      exclude-functions:
+        - io.Close
+        - io.Writer.Write
+        - (*net/http.Server).ListenAndServe
+        - github.com/g1eng/savac/cmd/helper.PrintJson([]byte)
+        - github.com/g1eng/savac/cmd/helper.PrintYaml([]byte)
+        - github.com/g1eng/savac/testutil/fake_vps.StartFakeServer(string)
+        - github.com/g1eng/savac/testutil/fake_vps.StartFaultServer(string)
+    staticcheck:
+      exclude-functions:
+        - github.com/g1eng/savac/pkg/core.FilteredResource
+        - github.com/g1eng/savac/pkg/core.EncodeHttpError
+    gosec:
+      exclude-functions:
+        - github.com/g1eng/savac/testutil/fake_cloud.NewObjectStorageFakeServer
+        - github.com/g1eng/savac/testutil/fake_vps/fake_server.*
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+

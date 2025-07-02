@@ -1,0 +1,62 @@
+[
+  {
+    "Name": "@",
+    "RData": "10 xn--p8ja0gy19z.ns-testing.s0csec1.org.",
+    "TTL": 10,
+    "Type": "MX"
+  },
+  {
+    "Name": "xn--p8ja0gy19z",
+    "RData": "127.0.0.1",
+    "TTL": 10,
+    "Type": "A"
+  },
+  {
+    "Name": "xn--p8ja0gy19z",
+    "RData": "172.17.0.1",
+    "TTL": 10,
+    "Type": "A"
+  },
+  {
+    "Name": "test-server.savac",
+    "RData": "160.16.87.33",
+    "TTL": 10,
+    "Type": "A"
+  },
+  {
+    "Name": "xn--p8ja0gy19z",
+    "RData": "::1",
+    "TTL": 10,
+    "Type": "AAAA"
+  },
+  {
+    "Name": "test-server.savac",
+    "RData": "2001:e42:102:1519:160:16:87:33",
+    "TTL": 10,
+    "Type": "AAAA"
+  },
+  {
+    "Name": "panclo",
+    "RData": "xn--p8ja0gy19z.ns-testing.s0csec1.org.",
+    "TTL": 10,
+    "Type": "CNAME"
+  },
+  {
+    "Name": "tsu-ten-kaku-ya",
+    "RData": "tsushima.tamo.s0csec1.org.",
+    "TTL": 10,
+    "Type": "CNAME"
+  },
+  {
+    "Name": "xn--p8ja0gy19z",
+    "RData": "v=spf1 -all",
+    "TTL": 10,
+    "Type": "TXT"
+  },
+  {
+    "Name": "nekowaf.savac",
+    "RData": "kuhqdsx7.user.webaccel.jp.",
+    "TTL": 10,
+    "Type": "CNAME"
+  }
+]

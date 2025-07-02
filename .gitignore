@@ -1,0 +1,13 @@
+/savac
+\#*\#
+*~
+/spec
+/tags
+/.idea
+/.DS_Store
+.*.swp
+openapi.json
+openapi.yaml
+spec.json
+/coverage.txt
+/go.mod.bak
