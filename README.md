@@ -1,4 +1,4 @@
-[![test](https://github.com/g1eng/savac/actions/workflows/test.yaml/badge.svg)](https://github.com/g1eng/savac/actions/workflows/test.yaml)
+[![CI](https://github.com/g1eng/SaVAC/actions/workflows/ci.yaml/badge.svg)](https://github.com/g1eng/SaVAC/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/g1eng/savac/graph/badge.svg)](https://codecov.io/gh/g1eng/savac)
 
 # これは何
@@ -47,7 +47,7 @@ Unix系OSでは、インストールスクリプトを利用できます。
 
 ```shell
 curl -fSLO https://raw.githubusercontent.com/g1eng/savac/refs/heads/main/install.sh
-sha256sum install.sh | grep -i 7162f569b4d9e11821b40b77928aef77f2a30787968ec4ebe32baa07a117f19e && PREFIX=$HOME sh < install.sh
+sha256sum install.sh | grep -i 6f9e293cd17c5ea7249deb9c419516b501f678ca075e74934c17d4db6aa9c515 && PREFIX=$HOME sh < install.sh
 ```
 
 ### 自分でビルドする場合
@@ -95,9 +95,9 @@ export SAKURA_VPS_API_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ## 制限事項
 
-次のVPS APIリソースを対象とするコマンドは未実装です。
+次のVPS API操作は未実装です。
 
-* server: `video-device`, `limitation`
+* server: `cdrom`, `video-device`, `limitation`
 
 # ライセンス
 

@@ -22,7 +22,7 @@ esac
 
 [ $ARCH = x86_64 ] && ARCH=amd64
 
-curl -fSL -o savac.zip https://github.com/g1eng/savac-old-mainline/releases/download/v0.4.1/savac-${OS}-${ARCH}.zip
+curl -fSL -o savac.zip https://github.com/g1eng/SaVAC/releases/download/v0.7.0/savac-${OS}-${ARCH}.zip
 unzip -d savac
 test -d $PREFIX/bin || {
   mkdir -v -p $PREFIX/bin
