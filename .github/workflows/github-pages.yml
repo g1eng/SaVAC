@@ -3,7 +3,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   push:
     branches:
-    - main
+    - documentation
   workflow_dispatch:
 
 permissions:
@@ -41,4 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
