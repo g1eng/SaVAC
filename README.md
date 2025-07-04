@@ -7,7 +7,7 @@
 
 SaVAC(Sakura VPS And Cloud utility)は「さくらのVPS」のAPIを通じた基盤操作をサポートする、非公式のCLIです。
 「[さくらのVPS API (v5.0.0)](https://manual.sakura.ad.jp/vps/api/api-doc)」などを利用する、
-サーバーやスイッチの操作、サーバー監視の設定をCLIでちまちま操作することができます。
+サーバーやスイッチの操作、サーバー監視の設定をCLIで実施することができます。
 
 <img src="assets/demo.gif" style="width: 90%; max-width: 1800px;"/>
 
@@ -104,6 +104,6 @@ export SAKURA_VPS_API_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxx
 Apache 2.0
 
 
-# Author
+# Authors
 
 Nomura Suzume <SuzuME[AT]ea.g1e.org>

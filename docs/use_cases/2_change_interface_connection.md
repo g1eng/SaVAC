@@ -16,7 +16,7 @@ xxxxbcd  sys-gateway      power_on   2c/1GB  os3   133.2ab.xxx.yyy  2401:2500:10
 xxxxdef  sys-adserver     power_on   3c/2GB  os3   133.2ab.xxx.yyy  2401:2500:102:aa04:133:2ab:xxx.yyy  os3   
 $ savac stop sys-
 $ sleep $wait_a_moment
-$ savac info sys-
+$ savac info -E sys-
 ...(output omitted)
 
 $ savac list -l 
@@ -24,7 +24,7 @@ $ savac list -l
 xxxxbcd  sys-gateway      power_off  2c/1GB  os3   133.2ab.xxx.yyy  2401:2500:102:1a11:133:2ab:xxx.yyy  os3   
 xxxxdef  sys-adserver     power_off  3c/2GB  os3   133.2ab.xxx.yyy  2401:2500:102:aa04:133:2ab:xxx.yyy  os3   
 
-$ savac interfaces sys-
+$ savac interfaces -E \^sys-
 server       NIC id    name       address       switchId   switch   
 sys-gateway  4340abcd  eth0  9c:a3:aa:xx:xx:xx  shared     global   
 sys-gateway  4340bcde  eth1  9c:a3:aa:xx:xx:xx  -          -        
@@ -50,7 +50,7 @@ $ savac sw list
    ID           NAME            CODE       ZONE  SERVER INTERFACES  EXTERNAL CONNECTION 
 20000abcd  sys-svc-switch  VPSSW20000abcd  os3   4340bcde,3239abcd 
 
-$ savac interfaces sys-
+$ savac interfaces \^sys-
 server       NIC id    name       address       switchId       switch   
 sys-gateway  4340abcd  eth0  9c:a3:aa:xx:xx:xx  shared     global   
 sys-gateway  4340bcde  eth1  9c:a3:aa:xx:xx:xx  20000abcd  -        

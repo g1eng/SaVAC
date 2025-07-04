@@ -6,7 +6,7 @@ permalink: /use_cases/
 
 # Tips & Tricks
 
-`savac`を用いたSakura Internet IaaS の操作に関する基本的なユースケースを紹介します。
+`savac`を用いた「さくらのVPS」基本的な操作方法を紹介します。
 
 [1. サーバーを一括操作する](1_bulk_operation.md)
 
