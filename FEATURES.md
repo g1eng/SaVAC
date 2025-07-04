@@ -42,17 +42,17 @@
 
 ## 1.4. VPS監視設定
 
-| サブコマンド                                                      | 説明                     |
-|-------------------------------------------------------------|------------------------|
-| monitoring list                                             | サーバー監視設定の一覧を表示します      |
-| monitoring info `target` `[monitoringId]`                   | 個別サーバーの監視設定の詳細を表示します   |
-| monitoring ping `target` `name` `[email\|webhook]` `[url]`  | サーバーのping監視設定を新規作成します  |
-| monitoring tcp `target` `name` `[email\|webhook]` `[url]`   | サーバーのtcp監視設定を新規作成します   |
-| monitoring http `target` `name` `[email\|webhook]` `[url]`  | サーバーのhttp監視設定を新規作成します  |
-| monitoring https `target` `name` `[email\|webhook]` `[url]` | サーバーのhttps監視設定を新規作成します |
-| monitoring smtp `target` `name` `[email\|webhook]` `[url]`  | サーバーのsmtp監視設定を新規作成します  |
-| monitoring pop3 `target` `name` `[email\|webhook]` `[url]`  | サーバーのpop3監視設定を新規作成します  |
-| monitoring delete `serverId` `[monitoringId]`               | 指定サーバーの監視設定を削除します      |
+| サブコマンド                                                                           | 説明                     |
+|----------------------------------------------------------------------------------|------------------------|
+| monitoring list                                                                  | サーバー監視設定の一覧を表示します      |
+| monitoring info `target` `[monitoringId]`                                        | 個別サーバーの監視設定の詳細を表示します   |
+| monitoring ping `target` `name` `[email\|webhook]` `[url]`                       | サーバーのping監視設定を新規作成します  |
+| monitoring tcp `target` `name` `[email\|webhook]` `[url]`                        | サーバーのtcp監視設定を新規作成します   |
+| monitoring http --host `host-header` `target` `name` `[email\|webhook]` `[url]`  | サーバーのhttp監視設定を新規作成します  |
+| monitoring https --host `host-header` `target` `name` `[email\|webhook]` `[url]` | サーバーのhttps監視設定を新規作成します |
+| monitoring smtp `target` `name` `[email\|webhook]` `[url]`                       | サーバーのsmtp監視設定を新規作成します  |
+| monitoring pop3 `target` `name` `[email\|webhook]` `[url]`                       | サーバーのpop3監視設定を新規作成します  |
+| monitoring delete `serverId` `[monitoringId]`                                    | 指定サーバーの監視設定を削除します      |
 
 * ※1 APIエンドポイントからのサーバー一覧の戻り値はキャッシュされた値です。電源状態を更新するには`savac info server-name`
   などとして、キャッシュの内容を更新してください。(`info` サブコマンドと正規表現オプション`-E`等を併用して複数リソースを参照する場合、対象サーバーのすべてに対する再帰的アクセスが発生します。
